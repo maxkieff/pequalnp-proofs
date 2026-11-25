@@ -1,0 +1,3 @@
+let W (k m : ℕ) := ∃ g : Fin 3 → Polynomial ℝ, (∀ i, (g i).support.card ≤ k) ∧
+  (∑ i, g i ^ 3) ≠ 0 ∧ Polynomial.rootMultiplicity 1 (∑ i, g i ^ 3) = m
+W 2 7 ∧ W 3 12 ∧ W 4 17
