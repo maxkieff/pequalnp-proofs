@@ -1,0 +1,6 @@
+∀ (L : Submodule ℂ (Fin 4 × Fin 4 → ℂ)),
+  (∀ t ∈ L, Matrix.permanent (Matrix.of fun (i j : Fin 4) =>
+    (if i = j then (2 : ℂ) else 1) + t (i,j)) = 65) → 6 ≤ Module.finrank ℂ L →
+  (∀ S : Finset (Fin 4 × Fin 4), (∀ p ∈ S, ∀ x ∈ L, x p = 0) → S.card ≤ 3) ∧
+  ∃ M : Finset (Equiv.Perm (Fin 4)), 6 ≤ M.card ∧
+    ∀ σ ∈ M, ∀ i, ∃ x ∈ L, x (i,σ i) ≠ 0
