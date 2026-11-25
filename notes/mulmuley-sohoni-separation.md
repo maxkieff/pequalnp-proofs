@@ -1,6 +1,8 @@
 # The first two exponents of Mulmuley–Sohoni separation
 
-The project asks whether, for every fixed positive integer $c$ and all sufficiently large $m$, the padded permanent lies outside the orbit closure of the complex determinant of size $m^c+1$. The Lean proof here establishes the statement for $c=1,2$. It also gives a uniform result for all determinant sizes up to a fixed multiple of $m^2$ plus one. The first unresolved exponent in this investigation is $c=3$. [Project statement](https://data.pequalnp.com/data/lemma/L-gct-011.e0ee1c5dec3d.json) · [Mulmuley and Sohoni](https://doi.org/10.1137/S009753970038715X)
+**November 25 update.** The November 23 and 24 circuit lower bounds give the full asymptotic separation for every fixed exponent. The quadratic proof below records what follows from the project's earlier lower bound alone. [Proof for all exponents and formalization status](gct-011-border-circuit-proof.md)
+
+The project asks whether, for every fixed positive integer $c$ and all sufficiently large $m$, the padded permanent lies outside the orbit closure of the complex determinant of size $m^c+1$. The Lean argument from L-gct-074 establishes the statement for $c=1,2$. It also gives a uniform result for all determinant sizes up to a fixed multiple of $m^2$ plus one. The first exponent beyond that argument is $c=3$. [Project statement](https://data.pequalnp.com/data/lemma/L-gct-011.e0ee1c5dec3d.json) · [Mulmuley and Sohoni](https://doi.org/10.1137/S009753970038715X)
 
 ## From a border expression to an orbit exclusion
 

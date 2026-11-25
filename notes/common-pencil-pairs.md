@@ -108,7 +108,7 @@ The measurement count is sharp for this particular central family. A single mono
 
 A second test constrains which coefficients an equation must see. The size-ten diagonal determinant $\prod_j(\sum_i x_{ij})$ reproduces the permanent on every monomial except those using each column once and repeating a row. Transposing gives the other orientation. Hence a separating equation needs access to errors of both orientations when expressed in individual coefficient coordinates. A matrix of coefficients taking one input from each row cannot suffice, even if it has thousands of entries.
 
-For the adjacent pair $F_0,F_1$, one identification saves at most nine states and gives size 1,014. Finding thirteen more savings there, or finding an equation of degree at least 231 that holds for every size-1,001 pencil and fails on the pair, remains open. A successful finite exclusion or containment would still leave the eventual quantifier in L-gct-011 to address.
+For the adjacent pair $F_0,F_1$, one identification saves at most nine states and gives size 1,014. Finding thirteen more savings there, or finding an equation of degree at least 231 that holds for every size-1,001 pencil and fails on the pair, remains open. The asymptotic result follows separately from the November circuit lower bounds. Their unspecified threshold leaves the ten-row case open. [Proof for all sufficiently large orders](gct-011-border-circuit-proof.md)
 
 ## Verification
 
