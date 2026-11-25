@@ -1,0 +1,8 @@
+(∀ (p : Polynomial ℝ), p ≠ 0 → ∀ x : ℝ, 0 < x → p.rootMultiplicity x < p.support.card) ∧
+(∀ (s : Fin 3 → ℝ) (g : Fin 3 → Polynomial ℝ), (∀ i, (g i).support.card ≤ 2) →
+  (∑ i, Polynomial.C (s i)*(g i)^3).support.card ≤
+    ∑ i, (if (g i).support.card ≤ 1 then 1 else 4)) ∧
+(∀ (s : Fin 3 → ℝ) (g : Fin 3 → Polynomial ℝ), (∀ i, (g i).support.card ≤ 2) →
+  let f := ∑ i, Polynomial.C (s i)*(g i)^3
+  f ≠ 0 → ∀ x : ℝ, 0 < x → f.rootMultiplicity x ≤ 11 ∧
+    ((∃ i, (g i).support.card ≤ 1) → f.rootMultiplicity x ≤ 8))
