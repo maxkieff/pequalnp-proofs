@@ -90,6 +90,8 @@ At $m=10$, $r=1{,}000$, the required rank is **at least 22**. This condition app
 
 The first undecided case here for three signed coordinates per physical state is $m=6$. It has 70 physical states and a size-211 pencil. The nonnegative lower bound forces any three-channel solution to use cancellation, and the scalar certificate rules out storing a single shared row label. A construction in the three-channel family for infinitely many sizes would refute the $c=3$ statement. Excluding that family would leave other pencils to consider. The general pencil problem and the asymptotic conjecture remain unresolved.
 
+A subsequent argument rules out this edge-labelled graph throughout the cubic budget for every $m\ge70$, allowing arbitrary complex matrices, nonuniform widths and coefficientwise limits. The six-row case with general signed weights remains open. [Supercubic lower bound](clow-prefix-lower-bound.md)
+
 Run the Python file from the repository root. With the pinned toolchain, from the repository's Lean directory run the following.
 
 ```sh
