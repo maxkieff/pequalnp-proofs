@@ -1,0 +1,17 @@
+∀ (q : ℕ), 0 < q → ∀ (L : Submodule ℂ (Fin 4 × Fin q → ℂ)),
+  (∀ t ∈ L, (∑ i : Fin 4, ∑ j, t (i,j)) = 0 ∧
+    (∑ j, ∑ l, if j = l then 0 else ∑ a : Fin 4, ∑ b : Fin 4,
+      if a < b then t (a,j)*t (b,l) else 0) = 0 ∧
+    (∑ j, ∑ l, ∑ m, if j = l ∨ j = m ∨ l = m then 0 else
+      ∑ a : Fin 4, ∑ b : Fin 4, ∑ c : Fin 4,
+        if a < b ∧ b < c then t (a,j)*t (b,l)*t (c,m) else 0) = 0 ∧
+    (∑ j, ∑ l, ∑ m, ∑ n, if j = l ∨ j = m ∨ j = n ∨ l = m ∨ l = n ∨ m = n
+      then 0 else t (0,j)*t (1,l)*t (2,m)*t (3,n)) = 0) →
+  ((∀ x ∈ L, (∀ i, (∑ j, x (i,j)) = 0) →
+    let g (i k : Fin 4) := ∑ j, x (i,j) * x (k,j)
+    g 0 1 * g 2 3 + g 0 2 * g 1 3 + g 0 3 * g 1 2 = 0) →
+      Module.finrank ℂ L ≤ q + 2) ∧
+  (∀ K : Submodule ℂ (Fin 4 × Fin q → ℂ),
+    (∀ x ∈ K, ∀ s : Finset (Fin 4),
+      (fun p : Fin 4 × Fin q => if p.1 ∈ s then x p else 0) ∈ L) →
+    Module.finrank ℂ K < q)
