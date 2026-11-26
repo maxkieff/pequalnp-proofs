@@ -1,0 +1,9 @@
+(∀ (g : Fin 3 → Polynomial ℝ) (s : Fin 3 → ℝ) (e f h : Fin 3 → ℕ),
+  (∀ i, (g i).support ⊆ {e i,f i,h i}) →
+  ¬Function.Injective (fun i => e i+f i+h i) → ∀ r : ℝ, r ≠ 0 →
+  (∀ i, (g i).eval r=0 ∧ (g i).derivative.eval r=0) →
+  Polynomial.rootMultiplicity r (∑ i, Polynomial.C (s i)*(g i)^3) ≤ 12) ∧
+(∃ (g : Fin 3 → Polynomial ℝ) (e f h : Fin 3 → ℕ),
+  (∀ i, (g i).support ⊆ {e i,f i,h i} ∧ e i+f i+h i=24 ∧
+    (g i).eval 1=0 ∧ (g i).derivative.eval 1=0) ∧
+  (∑ i, (g i)^3)≠0 ∧ Polynomial.rootMultiplicity 1 (∑ i, (g i)^3)=12)
