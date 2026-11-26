@@ -1,0 +1,16 @@
+(∀ (g : Fin 3 → Polynomial ℝ) (s : Fin 3 → ℝ), (∀ i, (g i).support.card ≤ 3) →
+  ¬LinearIndependent ℝ g → ∀ r : ℝ, r ≠ 0 →
+  Polynomial.rootMultiplicity r (∑ i, Polynomial.C (s i)*(g i)^3) ≤ 9) ∧
+(∃ g : Fin 3 → Polynomial ℝ, (∀ i, (g i).support.card ≤ 3) ∧ ¬LinearIndependent ℝ g ∧
+  (∑ i,(g i)^3) ≠ 0 ∧ Polynomial.rootMultiplicity 1 (∑ i,(g i)^3) = 9) ∧
+(∀ (p q : Polynomial ℝ) (a b u v w r : ℝ), r≠0 → p≠0 → q≠0 → a≠0 → b≠0 →
+  u≠0 → v≠0 → w≠0 → p.support.card≤3 → q.support.card≤3 →
+  (Polynomial.C a*p+Polynomial.C b*q).support.card≤3 →
+  Polynomial.rootMultiplicity r (Polynomial.C u*p^3+Polynomial.C v*q^3+
+    Polynomial.C w*(Polynomial.C a*p+Polynomial.C b*q)^3) ≤ 8) ∧
+(∃ (p q : Polynomial ℝ) (a b u v w : ℝ), p≠0 ∧ q≠0 ∧ a≠0 ∧ b≠0 ∧ u≠0 ∧ v≠0 ∧ w≠0 ∧
+  p.support.card≤3 ∧ q.support.card≤3 ∧ (Polynomial.C a*p+Polynomial.C b*q).support.card≤3 ∧
+  Polynomial.rootMultiplicity 1 (Polynomial.C u*p^3+Polynomial.C v*q^3+
+    Polynomial.C w*(Polynomial.C a*p+Polynomial.C b*q)^3) = 8) ∧
+(∀ (p q : Polynomial ℝ) (k : ℕ), p.support.card≤k → q.support.card≤k → ∀ a b r : ℝ, r≠0 →
+  Polynomial.rootMultiplicity r (Polynomial.C a*p^3+Polynomial.C b*q^3) ≤ 4*k-3)
